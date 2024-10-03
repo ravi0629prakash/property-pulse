@@ -63,7 +63,7 @@ const Navbar  = () => {
               <Link
                 href="/properties"
                 className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Properties of ravi</Link
+                >Properties</Link
               >
               <Link
                 href="/properties/add"
