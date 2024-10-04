@@ -1,13 +1,41 @@
+'use client'
 import properties from "@/properties.json";
 import PropertyCard from "@/components/PropertyCard";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import Loader from '@/app/loading'
 const HomeProperties = () => {
 
-  const recentProperties = properties.sort(()=>Math.random() -Math.random()).slice(0,3);
+  const [recentProperties , setRecentProperties] = useState([])
+  const [loading , setLoading] = useState(true)
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        
+        const res = await fetch('/api/properties')
+
+        const data = await res.json()
+        setRecentProperties(data.sort(()=>Math.random() -Math.random()).slice(0,3))
+        
+
+      } catch (error) {
+        console.log(error)
+      }
+      finally{
+        setLoading(false)
+      }
+
+    }
+
+    fetchProperties()
+
+  } , [])
+
+  if(loading){
+    return <Loader/>
+  }
 
   return ( 
-    
-     
    <>
     <section className="px-4 py-6">
       <div className="container-xl lg:container m-auto">
