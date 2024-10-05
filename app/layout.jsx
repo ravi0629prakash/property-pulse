@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'; 
 import Footer from '@/components/Footer';
 import '@/assets/styles/globals.css';
-
+import AuthProvider from '@/components/AuthProvider';
 
 export const metadata={
   title:'PropertyPulse | Find The Perfect rental for the tille ',
@@ -10,6 +10,7 @@ export const metadata={
 }
 const MainLayout = ({children}) => {
   return (
+    <AuthProvider>
     <html lang='en'>
       <body>
         <Navbar />
@@ -17,6 +18,7 @@ const MainLayout = ({children}) => {
           <Footer />
       </body>
     </html>
+    </AuthProvider>   
   );
 };
 

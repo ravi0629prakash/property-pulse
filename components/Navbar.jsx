@@ -6,6 +6,7 @@ import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
 import profileDefault from '@/assets/images/profile.png';
  import{FaGoogle } from 'react-icons/fa';
+ 
 
 const Navbar  = () => {
 
