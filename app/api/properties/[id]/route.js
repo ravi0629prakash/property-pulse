@@ -6,7 +6,7 @@ import { getSessionUser } from '@/utils/getSessionUser';
 export const GET = async (request, { params }) => {
   try {
     await connectDB();
-
+    // console.log("ravi" , params.id)
     const property = await Property.findById(params.id);
 
     if (!property) return new Response('Property Not Found', { status: 404 });
@@ -77,7 +77,7 @@ export const PUT = async (request, { params }) => {
 
     // Get property to update
     const existingProperty = await Property.findById(id);
-    
+
     if (!existingProperty) {
       return new Response('Property does not exist', { status: 404 });
     }
