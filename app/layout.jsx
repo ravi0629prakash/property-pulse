@@ -4,6 +4,7 @@ import '@/assets/styles/globals.css';
 import AuthProvider from '@/components/AuthProvider';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {GlobalProvider} from '@/context/GlobalContext';
 
 export const metadata={
   title:'PropertyPulse | Find The Perfect rental for the tille ',
@@ -12,6 +13,7 @@ export const metadata={
 }
 const MainLayout = ({children}) => {
   return (
+    <GlobalProvider>
     <AuthProvider>
     <html lang='en'>
       <body>
@@ -21,7 +23,8 @@ const MainLayout = ({children}) => {
           <ToastContainer/> 
       </body>
     </html>
-    </AuthProvider>   
+    </AuthProvider> 
+    </GlobalProvider>  
   );
 };
 

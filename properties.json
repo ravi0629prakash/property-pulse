@@ -354,8 +354,8 @@
     "description": "Step back in time with a stay in this historic downtown loft.",
     "location": {
       "street": "123 History Lane",
-      "city": "Philadelphia",
-      "state": "PA",
+      "city": "",
+      "state": "PAPhiladelphia",
       "zipcode": "19101"
     },
     "beds": 2,
