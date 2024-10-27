@@ -5,7 +5,7 @@ async function fetchProperty(id){
 
       if(!apiDomain)
       {
-        return null;
+        return [];
       }
       
       const res =await fetch(`${apiDomain}/properties/${id}`,{cache:'no-store'});
