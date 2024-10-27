@@ -3,12 +3,12 @@ import { apiDomain } from "@/constants/constants";
 async function fetchProperty(id){
     try{
 
-      if(!apiDomain)
-      {
-        return null;
-      }
+      // if(!apiDomain)
+      // {
+      //   return null;
+      // }
       
-      const res =await fetch(`${apiDomain}/properties/${id}`,{cache:'no-store'});
+      const res =await fetch(`/api/properties/${id}`,{cache:'no-store'});
        
       if(!res.ok)
       {
