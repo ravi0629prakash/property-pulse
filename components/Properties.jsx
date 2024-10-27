@@ -44,7 +44,7 @@ const Properties = () => {
         ) : ( 
         <div className= "grid grid-cols-1 md:grid-cols-3 gap-6">
           { properties.map((property)=> (
-           <PropertyCard Key={property._id} property={property} / >
+           <PropertyCard key={property._id} property={property} / >
           ))}
           </div>)}
        <Pagination page={page} pageSize={pageSize} totalItems={totalItems} onPageChange={handlePageChange}/>

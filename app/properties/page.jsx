@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Loader from '@/app/loading'
 import PropertySearchForm from '@/components/PropertySearchForm';
 import Properties from '@/components/Properties';
-const PropertiesPage = async() => {
+const PropertiesPage = () => {
  
   // const [properties , setProperties] = useState([])
   // const [loading , setLoading] = useState(true)
