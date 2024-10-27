@@ -1,5 +1,6 @@
 import InfoBox from "./InfoBox";
 
+
 const infoBoxes = () => {
   return (
     <section>
