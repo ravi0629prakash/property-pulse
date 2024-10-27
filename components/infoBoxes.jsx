@@ -14,6 +14,7 @@ const infoBoxes = () => {
                 text:'Browse Properties',
                 link:'/properties',
                 backgroundColor:'bg-black',
+                
             }}
             >
                 Find your drean rental property. Bookmark properties  and contact owners.
